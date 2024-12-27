@@ -7,6 +7,7 @@ Overview
 The **Input Agent** in the **Segma-Vision Agriculture** project plays a crucial role in interpreting user queries and determining the tasks that need to be performed based on those inputs. The agent utilizes the **Gemini LLM (Large Language Model)** to analyze user input and decide which agricultural-related tasks are necessary, whether an image is required, and if additional information is needed.
 
 Tasks handled by the Input Agent:
+
 1. Plant disease detection/classification
 2. Weed detection
 3. Soil classification analysis
@@ -33,6 +34,7 @@ The following diagram shows how the **Input Agent** processes the user input, an
    :alt: Input Agent Task Decision Flow
    :width: 600px
    :align: center
+   ..
 
 Task Decision Code
 ------------------
@@ -40,6 +42,7 @@ Task Decision Code
 The following Python code defines how the Input Agent decides which tasks to perform based on the user's query:
 
 .. code-block:: python
+    
     import google.generativeai as genai
 
     # Configure the Gemini API key
@@ -82,6 +85,8 @@ The following Python code defines how the Input Agent decides which tasks to per
         # Print and return the response
         print(response_text)
         return response_text
+
+    
 
 Task Examples
 =============

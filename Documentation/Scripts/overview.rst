@@ -30,20 +30,21 @@ The core concept of Segma-Vision Agriculture is its **multi-agent system**, wher
 
 Through this multi-agent approach, Segma-Vision Agriculture allows for more precise and focused solutions, each tailored to meet the unique needs of agricultural professionals. The modular design also facilitates easy updates and expansions as the system evolves and incorporates new tasks or improvements.
 
-Pipeline (To be Added)
+Pipeline 
 -----------------------
 The following pipeline illustrates the workflow of Segma-Vision Agriculture and the interaction between agents:
+
+.. image:: Documentation/Images/agi.png
+   :alt: Alternate text for the image
+   :width: 600px
+   :align: center
+   ..
 
 1. **User Input**: The user provides a query and an image (if applicable).
 2. **Input Agent**: Interprets the query and prepares the task.
 3. **Coordinator Agent**: Directs the task to the appropriate task-specific agent.
 4. **Task-Specific Agent(s)**: Executes the task (e.g., disease detection, weed detection, or yield prediction).
 5. **Output**: The result is delivered to the user in the form of segmented images, predictions, or insights.
-
-.. image:: Documentation/Images/agi.png
-   :alt: Alternate text for the image
-   :width: 600px
-   :align: center
 
 
 Conclusion

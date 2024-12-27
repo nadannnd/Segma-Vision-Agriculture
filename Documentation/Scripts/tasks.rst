@@ -1,10 +1,10 @@
-.. Task-Specific Agents
+Task-Specific Agents
 ========================
 
 The **Task-Specific Agents** are responsible for performing specialized tasks identified by the **Input Agent** and orchestrated by the **Coordinator Agent**. Each task, such as **plant disease detection**, **crop yield prediction**, **weed detection**, etc., has its own dedicated agent that handles the task's specific requirements and processes the data (images or non-image data).
 
-### Overview of Task-Specific Agents
------------------------------------
+Overview of Task-Specific Agents
+====================
 
 Each task-specific agent performs a unique role based on the user’s query. The agents perform actions such as:
 
@@ -13,8 +13,9 @@ Each task-specific agent performs a unique role based on the user’s query. The
 3. **Weed Detection Agent**: Detects weeds in agricultural images, distinguishing them from the crops.
 4. **Soil Classification Agent**: Analyzes soil images or data to classify soil types for agricultural use.
 
-### Architecture
--------------
+Architecture
+====================
+
 The architecture of the multi-agent system is designed to be modular, with each agent handling a specific task. The **Coordinator Agent** calls upon each of these task-specific agents as needed, passing the appropriate data for processing.
 
 Below is a high-level overview of how these agents interact:

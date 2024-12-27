@@ -9,12 +9,14 @@ Welcome to Segma-Vision Agriculture Documentation !
 
    ..
 
+
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Table of contents:
 
    Documentation/Scripts/team.rst
-   Documentation/Scripts/pipeline.rst
    Documentation/Scripts/segmavi.rst
    Documentation/Scripts/overview.rst
    Documentation/Scripts/input.rst

@@ -1,4 +1,4 @@
-.. Coordinator Agent
+Coordinator Agent
 ===================
 
 The **Coordinator Agent** acts as the central controller that orchestrates the execution of various task-specific agents based on the tasks decided by the **Input Agent**. This agent coordinates which task needs to be executed, depending on the user's query. It processes the response from the Input Agent, delegates tasks to the relevant agents, and gathers the results for further use.

@@ -11,6 +11,7 @@ The following diagram explains the agent:
 
 .. image:: Documentation\Images\yil.png
    :alt: Yield Prediction Agent Process
+   ..
 
 Training Process
 ----------------

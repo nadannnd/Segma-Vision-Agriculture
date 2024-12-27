@@ -10,4 +10,4 @@ Supervisor :
 Members : 
 --------------
 
-    - **Member 1**: Nada Mourhrib
+    - Nada Mourhrib
