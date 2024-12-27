@@ -1,4 +1,4 @@
-Segma-Vision Agriculture: Input Agent
+Input Agent
 ====================================
 
 Overview
@@ -30,7 +30,7 @@ Task Decision Flow Diagram
 
 The following diagram shows how the **Input Agent** processes the user input, analyzes it using Gemini LLM, and determines the appropriate tasks. It also indicates whether additional information or images are required for the tasks.
 
-.. image:: Documentation\Images\inp.png
+.. figure:: Documentation\Images\inp.png
    :alt: Input Agent Task Decision Flow
    :width: 600px
    :align: center
@@ -42,7 +42,7 @@ Task Decision Code
 The following Python code defines how the Input Agent decides which tasks to perform based on the user's query:
 
 .. code-block:: python
-    
+
     import google.generativeai as genai
 
     # Configure the Gemini API key
@@ -95,7 +95,7 @@ The following examples illustrate how the **Input Agent** handles user queries a
 
 1. **User Input:** "Analyze this plant for diseases."
     - **Output:** 
-        ```json
+        ```bash
         [
             {"task": "Plant disease detection and classification", "image_required": true, "additional_info_required": false}
         ]
@@ -103,7 +103,7 @@ The following examples illustrate how the **Input Agent** handles user queries a
 
 2. **User Input:** "Predict crop yield for my farm."
     - **Output:** 
-        ```json
+        ```bash
         [
             {"task": "Agriculture crop yield prediction", "image_required": false, "additional_info_required": true}
         ]
@@ -111,7 +111,7 @@ The following examples illustrate how the **Input Agent** handles user queries a
 
 3. **User Input:** "Identify this plant and check for weeds."
     - **Output:** 
-        ```json
+        ```bash
         [
             {"task": "Plant identification", "image_required": true, "additional_info_required": false},
             {"task": "Weed detection", "image_required": true, "additional_info_required": false}
@@ -120,7 +120,7 @@ The following examples illustrate how the **Input Agent** handles user queries a
 
 4. **User Input:** "Analyze the soil and predict the yield."
     - **Output:** 
-        ```json
+        ```bash
         [
             {"task": "Soil classification analysis", "image_required": true, "additional_info_required": false},
             {"task": "Agriculture crop yield prediction", "image_required": false, "additional_info_required": true}
@@ -215,6 +215,7 @@ The **Input Agent** uses the Gemini LLM model to determine the appropriate tasks
         crop_name = input("Enter crop name: ")
 
         return city_name, days, crop_name
+
 
 
 This code snippet demonstrates how the Input Agent works. When the user provides a query, the agent uses the Gemini LLM to determine the task that needs to be performed and whether any additional information or image is required. The agent responds in a JSON format that is easy to parse and use for further processing.

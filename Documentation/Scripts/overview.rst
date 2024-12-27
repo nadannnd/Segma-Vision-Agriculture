@@ -34,7 +34,7 @@ Pipeline
 -----------------------
 The following pipeline illustrates the workflow of Segma-Vision Agriculture and the interaction between agents:
 
-.. image:: Documentation/Images/agi.png
+.. figure:: Documentation\Images\agi.png
    :alt: Alternate text for the image
    :width: 600px
    :align: center

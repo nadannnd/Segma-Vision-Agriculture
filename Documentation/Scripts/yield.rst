@@ -9,8 +9,9 @@ Agent Pipeline
 ----------------
 The following diagram explains the agent:
 
-.. image:: Documentation\Images\yil.png
+.. figure:: Documentation\Images\yil.png
    :alt: Yield Prediction Agent Process
+
    ..
 
 Training Process
@@ -47,8 +48,9 @@ Training Diagram
 ----------------
 The following diagram explains the training process:
 
-.. image:: Documentation\Images\trai.png
+.. figure:: Documentation\Images\trai.png
    :alt: Yield Prediction Agent Training Process
+   ..
 
 Prediction Workflow
 -------------------
@@ -72,12 +74,14 @@ Once the best model is selected and saved, the prediction workflow proceeds as f
 Model Performance Metrics
 -------------------------
 The performance of the models is evaluated using two metrics:
+
 - **Mean Squared Error (MSE)**: A measure of how well the model's predictions match the actual values.
 - **R2 Score**: A statistical measure that indicates the proportion of the variance in the dependent variable that is predictable from the independent variables.
 
 Best Model: Random Forest
 --------------------------
 The Random Forest model was selected as the best model based on the highest R2 score achieved during the evaluation phase.
+
 
 Weather Data Fetching and Crop Yield Prediction
 ===============================================

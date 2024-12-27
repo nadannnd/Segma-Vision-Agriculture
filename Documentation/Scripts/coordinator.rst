@@ -63,6 +63,7 @@ Next Steps:
 ===================
 
 To make the **Coordinator Agent** fully functional, you'll need to:
+
 1. **Implement the Task-Specific Agents**: Implement functions for tasks like **plant disease detection**, **crop yield prediction**, etc.
 2. **Handle Input Data**: Ensure that the required data (images or non-image data) is passed correctly to the task-specific agents.
 3. **Extend for More Tasks**: As the project evolves, you can extend the **Coordinator Agent** to handle additional tasks such as weed detection, soil analysis, and plant identification by integrating the appropriate models and logic.

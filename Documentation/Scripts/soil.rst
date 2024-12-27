@@ -1,4 +1,4 @@
-Segma-Vision Agriculture: Soil Classification Agent
+Soil Classification Agent
 ==================================================
 
 Overview
@@ -6,6 +6,7 @@ Overview
 The **Soil Classification Agent** in the **Segma-Vision Agriculture** project is responsible for classifying soil types from image data. This agent leverages a deep learning model trained to recognize various soil types, providing essential insights for agricultural applications. It analyzes images of soil and outputs the predicted classification, which helps in decision-making related to farming practices and crop management.
 
 Tasks handled by the Soil Classification Agent:
+
 1. Soil type classification based on image data.
 2. Soil analysis using image data to identify soil categories.
 
@@ -21,16 +22,19 @@ Model Architecture
 ------------------
 The **Soil Classification Agent** uses a **MobileNetV2** model pretrained on **ImageNet** as the base. This base model is fine-tuned for the specific task of soil classification, which includes adding custom layers for improved performance on the target task.
 
-### Base Model:
+Base Model:
+
 - **Model**: MobileNetV2
 - **Pretraining**: Trained on ImageNet
 
-### Custom Layers:
+Custom Layers:
+
 - **Global Average Pooling Layer**: Reduces the spatial dimensions of the feature maps, resulting in a vector that summarizes the features.
 - **Dense Layer**: A fully connected layer with 1024 units and ReLU activation function.
 - **Output Layer**: A softmax layer with 6 neurons, corresponding to the 6 soil types being classified.
 
-### Optimizer and Loss Function:
+Optimizer and Loss Function:
+
 - **Optimizer**: Adam, an adaptive learning rate optimization algorithm.
 - **Loss Function**: Categorical Crossentropy, used for multiclass classification tasks.
 - **Metrics**: Accuracy and Recall, to monitor the model's performance during training.
@@ -58,18 +62,21 @@ The graph below shows the training and validation accuracy over the 100 epochs. 
    :alt: Training and Validation Accuracy for Soil Classification Model
 
     *Figure 1*: Training and Validation Accuracy for Soil Classification.
+   ..
+
 
 The graph provides insight into the model's training process. Ideally, both the training and validation accuracy should increase steadily over time, indicating that the model is learning and not overfitting.
 
 Model Evaluation
 ----------------
 After training, the model's performance is evaluated using the validation set. The evaluation metrics include:
+
 - **Accuracy**: The percentage of correctly classified soil types out of all predictions.
 - **Recall**: The model's ability to correctly identify soil types from the total number of true positives.
 
 The following command demonstrates how to evaluate the model on the validation set:
 
-.. code-block:: text
+.. code-block:: python
     # Evaluate model on validation data
     val_predictions = model.predict(X_val)
     val_accuracy = accuracy_score(y_val, val_predictions)
@@ -79,6 +86,7 @@ The following command demonstrates how to evaluate the model on the validation s
 Task Decision Code
 -------------------
 The **Input Agent** decides whether to route the task to the **Soil Classification Agent** based on the user's query. Below is the decision logic:
+
 
 .. code-block:: python
     def decide_soil_task(user_input):
@@ -95,13 +103,14 @@ The **Input Agent** decides whether to route the task to the **Soil Classificati
     task_decision = decide_soil_task(user_input)
     print(task_decision)
 
+
 Task Examples
 -------------
 Here are some examples of how the **Soil Classification Agent** handles different user queries:
 
 1. **User Input:** "Classify the soil type from this image."
     - **Output:** 
-        ```json
+        ```bash
         [
             {"task": "Soil classification", "image_required": true, "additional_info_required": false}
         ]
@@ -109,7 +118,7 @@ Here are some examples of how the **Soil Classification Agent** handles differen
 
 2. **User Input:** "Analyze the soil composition in this field."
     - **Output:** 
-        ```json
+        ```bash
         [
             {"task": "Soil classification", "image_required": true, "additional_info_required": false}
         ]
@@ -117,7 +126,7 @@ Here are some examples of how the **Soil Classification Agent** handles differen
 
 3. **User Input:** "What is the soil type in this image?"
     - **Output:** 
-        ```json
+        ```bash
         [
             {"task": "Soil classification", "image_required": true, "additional_info_required": false}
         ]

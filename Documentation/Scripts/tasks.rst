@@ -20,37 +20,38 @@ The architecture of the multi-agent system is designed to be modular, with each 
 
 Below is a high-level overview of how these agents interact:
 
-.. image:: Documentation/Images/specif.png
+.. figure:: Documentation/Images/specif.png
    :alt: Task-Specific Agents Architecture  
    :width: 600px  
    :align: center  
+   ..
 
 ---
 
-## Detailed Presentation of Task-Specific Agents
+Detailed Presentation of Task-Specific Agents
 
-### 1. **Plant Disease Detection Agent**
+1. **Plant Disease Detection Agent**
    - **Functionality**: This agent processes images of plants to detect potential diseases and classify them. It uses deep learning models trained on datasets of healthy and diseased plants.
    - **Input**: An image of the plant.
    - **Output**: A classification of whether the plant is healthy or diseased, and if diseased, the specific type of disease.
 
    **Use Case**: This agent helps farmers by identifying plant diseases early, allowing for prompt treatment.
 
-### 2. **Crop Yield Prediction Agent**
+2. **Crop Yield Prediction Agent**
    - **Functionality**: This agent predicts the crop yield based on non-image data such as historical crop data, environmental conditions, and geographical information.
    - **Input**: Non-image data (e.g., temperature, soil moisture, crop history).
    - **Output**: Predicted crop yield value.
 
    **Use Case**: This agent helps farmers estimate how much yield they can expect from a particular crop, assisting in planning and resource management.
 
-### 3. **Weed Detection Agent**
+3. **Weed Detection Agent**
    - **Functionality**: This agent analyzes images of agricultural fields to detect and segment weeds from crops. It uses deep learning models to identify weeds in various stages of growth.
    - **Input**: An image of an agricultural field.
    - **Output**: A classification of whether weeds are present in the image and their locations.
 
    **Use Case**: Weed management is a major concern for farmers, and this agent helps automate the process of weed detection, reducing labor costs and improving crop health.
 
-### 4. **Soil Classification Agent**
+4. **Soil Classification Agent**
    - **Functionality**: This agent analyzes soil data (either images or sensor data) to classify the soil type. Soil properties, such as pH, moisture content, and temperature, are used to determine soil suitability for different crops.
    - **Input**: Soil data or images.
    - **Output**: A classification of the soil type (e.g., Loam, Clay, Sandy, etc.).
@@ -59,7 +60,8 @@ Below is a high-level overview of how these agents interact:
 
 ---
 
-### Integration in the System
+Integration in the System
+====================
 
 Each of these task-specific agents is integrated within the multi-agent system. The **Coordinator Agent** determines which specific agent should be invoked based on the task at hand and manages the flow of data between them. This modular architecture allows for flexibility, where new agents can be added in the future to handle additional tasks in the agricultural domain.
 
