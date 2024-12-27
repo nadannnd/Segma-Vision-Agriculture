@@ -11,6 +11,7 @@ The system is composed of multiple specialized agents that collaborate to delive
 
 Concept of Using Multiple Agents
 ---------------------------------
+
 The core concept of Segma-Vision Agriculture is its **multi-agent system**, where each agent has a specific role to play in the overall workflow. By dividing the tasks into smaller, manageable components, the system ensures efficiency, scalability, and flexibility for agricultural applications. These agents are:
 
 1. **Input Agent**:
@@ -28,6 +29,12 @@ The core concept of Segma-Vision Agriculture is its **multi-agent system**, wher
      - **Yield Prediction**: Using environmental data and image inputs to predict crop yields.
      - Each task-specific agent leverages machine learning models (such as GroundingDINO for segmentation and classification, or custom regression models for yield prediction) to perform its function.
 
+.. figure:: agi.png
+   :alt: Alternate text for the image
+   :width: 600px
+   :align: center
+
+
 Through this multi-agent approach, Segma-Vision Agriculture allows for more precise and focused solutions, each tailored to meet the unique needs of agricultural professionals. The modular design also facilitates easy updates and expansions as the system evolves and incorporates new tasks or improvements.
 
 Pipeline 
@@ -40,7 +47,7 @@ The following pipeline illustrates the workflow of Segma-Vision Agriculture and 
 4. **Task-Specific Agent(s)**: Executes the task (e.g., disease detection, weed detection, or yield prediction).
 5. **Output**: The result is delivered to the user in the form of segmented images, predictions, or insights.
 
-.. figure:: agi.png
+.. figure:: mypipeline.png
    :alt: Alternate text for the image
    :width: 600px
    :align: center

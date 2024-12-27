@@ -1,7 +1,7 @@
 Welcome to Segma-Vision Agriculture Documentation !
 ====================================
 
-.. figure:: Documentation/Images/mylogo.png
+.. figure:: Documentation/Scripts/mylogo.png
    :width: 80%
    :align: center
    :alt: Alternative text for the image
