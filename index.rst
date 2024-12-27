@@ -9,9 +9,7 @@ Welcome to Segma-Vision Agriculture Documentation !
 
    ..
 
-
-
-
+      
 .. toctree::
    :maxdepth: 2
    :caption: Table of contents:
