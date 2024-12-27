@@ -9,10 +9,9 @@ Agent Pipeline
 ----------------
 The following diagram explains the agent:
 
-.. figure:: Documentation\Images\yil.png
+.. figure:: Documentation/Images/yil.png
    :alt: Yield Prediction Agent Process
 
-   ..
 
 Training Process
 ----------------
@@ -48,9 +47,9 @@ Training Diagram
 ----------------
 The following diagram explains the training process:
 
-.. figure:: Documentation\Images\trai.png
+.. figure:: Documentation/Images/trai.png
    :alt: Yield Prediction Agent Training Process
-   ..
+
 
 Prediction Workflow
 -------------------
@@ -71,6 +70,7 @@ Once the best model is selected and saved, the prediction workflow proceeds as f
 5. **Output**:
    The predicted crop yield is returned to the user.
 
+
 Model Performance Metrics
 -------------------------
 The performance of the models is evaluated using two metrics:
@@ -84,7 +84,7 @@ The Random Forest model was selected as the best model based on the highest R2 s
 
 
 Weather Data Fetching and Crop Yield Prediction
-===============================================
+----------------
 
 This section describes the Python code used to fetch weather data and process it for crop yield prediction.
 
@@ -93,6 +93,7 @@ This section describes the Python code used to fetch weather data and process it
 The necessary libraries for weather data fetching, geolocation, and machine learning are imported at the beginning. These include `requests`, `pandas`, `geopy`, and `joblib`.
 
 .. code-block:: python
+    
     import requests
     import pandas as pd
     from datetime import datetime, timedelta
@@ -108,6 +109,7 @@ The necessary libraries for weather data fetching, geolocation, and machine lear
 The `get_coordinates` function retrieves the latitude and longitude of a given city name using the `geopy` library. It handles retries in case of timeouts from the geocoding service.
 
 .. code-block:: python
+
     def get_coordinates(city_name, max_retries=3, timeout=5):
         for attempt in range(max_retries):
             try:
@@ -127,6 +129,7 @@ The `get_coordinates` function retrieves the latitude and longitude of a given c
 The `create_requests_session` function sets up a session with automatic retries for handling common HTTP errors such as 429 (Too Many Requests) and 500 (Internal Server Error).
 
 .. code-block:: python
+
     def create_requests_session():
         session = requests.Session()
         retry_strategy = Retry(
@@ -144,6 +147,7 @@ The `create_requests_session` function sets up a session with automatic retries 
 The `fetch_nasa_power_data` function uses the NASA POWER API to fetch weather data for a given location (latitude and longitude) and date range. It retrieves parameters such as temperature, relative humidity, precipitation, and specific humidity.
 
 .. code-block:: python
+
     def fetch_nasa_power_data(latitude, longitude, start_date, end_date):
         base_url = "https://power.larc.nasa.gov/api/temporal/daily/point"
         parameters = [
@@ -176,6 +180,7 @@ The `fetch_nasa_power_data` function uses the NASA POWER API to fetch weather da
 The `process_nasa_data` function extracts and processes the weather data returned by the NASA API, converting it into a pandas DataFrame. Invalid or missing values are handled.
 
 .. code-block:: python
+
     def process_nasa_data(data):
         try:
             parameter_data = data['properties']['parameter']
@@ -206,6 +211,7 @@ The `process_nasa_data` function extracts and processes the weather data returne
 The `aggregate_weather_data` function calculates the average weather parameters (temperature, precipitation, humidity) over the provided period to provide a summarized weather overview for crop yield prediction.
 
 .. code-block:: python
+
     def aggregate_weather_data(df):
         aggregated = pd.DataFrame([{
             'Temperature at 2 Meters (C)': df['Temperature at 2 Meters (C)'].mean(),
@@ -220,6 +226,7 @@ The `aggregate_weather_data` function calculates the average weather parameters 
 The `predict_crop_yield` function combines the fetched weather data with a pre-trained machine learning model (random forest). It uses the weather data and crop type to make a prediction on crop yield.
 
 .. code-block:: python
+
     def predict_crop_yield(city_name, crop_type, days=30):
         try:
             # Load the saved model, encoder, and scaler
@@ -270,6 +277,7 @@ The `predict_crop_yield` function combines the fetched weather data with a pre-t
 In the `__main__` section, the program continuously prompts the user for input, including the city name, crop type, and the number of days to analyze. It then displays the predicted crop yield.
 
 .. code-block:: python
+
     if __name__ == "__main__":
         print("Crop Yield Prediction System")
         print("-" * 30)

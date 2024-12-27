@@ -95,37 +95,36 @@ The following examples illustrate how the **Input Agent** handles user queries a
 
 1. **User Input:** "Analyze this plant for diseases."
     - **Output:** 
-        ```bash
-        [
-            {"task": "Plant disease detection and classification", "image_required": true, "additional_info_required": false}
-        ]
-        ```
+.. code-block:: json
+    [
+        {"task": "Plant disease detection and classification", "image_required": true, "additional_info_required": false}
+    ]
 
 2. **User Input:** "Predict crop yield for my farm."
     - **Output:** 
-        ```bash
-        [
-            {"task": "Agriculture crop yield prediction", "image_required": false, "additional_info_required": true}
-        ]
-        ```
+.. code-block:: json
+    [
+        {"task": "Agriculture crop yield prediction", "image_required": false, "additional_info_required": true}
+    ]
+
 
 3. **User Input:** "Identify this plant and check for weeds."
     - **Output:** 
-        ```bash
-        [
-            {"task": "Plant identification", "image_required": true, "additional_info_required": false},
-            {"task": "Weed detection", "image_required": true, "additional_info_required": false}
-        ]
-        ```
+.. code-block:: json
+    [
+        {"task": "Plant identification", "image_required": true, "additional_info_required": false},
+        {"task": "Weed detection", "image_required": true, "additional_info_required": false}
+    ]
+
 
 4. **User Input:** "Analyze the soil and predict the yield."
     - **Output:** 
-        ```bash
-        [
-            {"task": "Soil classification analysis", "image_required": true, "additional_info_required": false},
-            {"task": "Agriculture crop yield prediction", "image_required": false, "additional_info_required": true}
-        ]
-        ```
+.. code-block:: json
+    [
+        {"task": "Soil classification analysis", "image_required": true, "additional_info_required": false},
+        {"task": "Agriculture crop yield prediction", "image_required": false, "additional_info_required": true}
+    ]
+
 
 Code for Input Agent
 ====================
@@ -133,6 +132,7 @@ Code for Input Agent
 The **Input Agent** uses the Gemini LLM model to determine the appropriate tasks to perform based on the user's input. Below is the Python code for the Input Agent:
 
 .. code-block:: python
+    
     import google.generativeai as genai
 
     # Configure the Gemini API key

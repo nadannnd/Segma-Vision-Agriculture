@@ -13,7 +13,7 @@ Key Functions
 3. **Aggregating Results:** After executing the tasks, the Coordinator collects and aggregates the results from the task-specific agents and returns them in a structured format.
 
 Code Implementation
-=======================
+------------------
 
 The code snippet below demonstrates the implementation of the **Coordinator Agent** in Python:
 
@@ -60,7 +60,7 @@ The code snippet below demonstrates the implementation of the **Coordinator Agen
 
 
 Next Steps:
-===================
+------------------
 
 To make the **Coordinator Agent** fully functional, you'll need to:
 

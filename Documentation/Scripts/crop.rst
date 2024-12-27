@@ -27,12 +27,10 @@ The architecture of the **Plant Disease Detection Agent** follows a modular deep
 
 Below is a high-level architecture diagram of the Plant Disease Detection system:
 
-.. figure:: Documentation\Images\crop.png  
+.. figure:: Documentation/Images/crop.png  
    :alt: Plant Disease Detection Architecture  
    :width: 600px  
    :align: center  
-   ..
-
 
 Fine-Tuning the Model
 -------------------------
@@ -44,10 +42,7 @@ The fine-tuning of the model was conducted in a Google Colab notebook. The noteb
 
 You can access the notebook used for fine-tuning the **GroundingDINO** model on plant diseases here:
 
-.. raw:: html
-   <a href="https://colab.research.google.com/drive/1A5wfaaOKIVnll9-w3K_Q8bOLCWgp5M_7?usp=sharing" target="_blank">Plant Disease Fine-Tuning Notebook</a>
-
-**Colab Notebook Link**: [Plant Disease Fine-Tuning Notebook](https://colab.research.google.com/drive/1A5wfaaOKIVnll9-w3K_Q8bOLCWgp5M_7?usp=sharing)
+**Colab Notebook Link**: `Plant Disease Fine-Tuning Notebook <https://colab.research.google.com/drive/1A5wfaaOKIVnll9-w3K_Q8bOLCWgp5M_7?usp=sharing>`_
 
 In this notebook, we:
 
@@ -107,12 +102,11 @@ Here is the code for the **Plant Disease Detection Agent**:
         image = normalize_image(image)
         return image
 
----
+
 
 This agent integrates seamlessly into the **Segma-Vision Agriculture** multi-agent system, providing a crucial service for plant disease identification and helping optimize agricultural practices through early detection of plant diseases.
 
 **See the Segma-Vision integration documentation for further details on the architecture and system flow.**
 
----
 
-For more information, check out the [Segma-Vision Notebook](https://github.com/MasrourTawfik/SegmaVisionPro/blob/main/SegmaVisionPro_Test_NoteBook2.ipynb).
+For more information, check out the **Segma-Vision Notebook**: `Segma-Vision Notebook <https://github.com/MasrourTawfik/SegmaVisionPro/blob/main/SegmaVisionPro_Test_NoteBook2.ipynb>`_

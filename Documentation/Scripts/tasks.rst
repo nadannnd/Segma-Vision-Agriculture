@@ -4,7 +4,7 @@ Task-Specific Agents
 The **Task-Specific Agents** are responsible for performing specialized tasks identified by the **Input Agent** and orchestrated by the **Coordinator Agent**. Each task, such as **plant disease detection**, **crop yield prediction**, **weed detection**, etc., has its own dedicated agent that handles the task's specific requirements and processes the data (images or non-image data).
 
 Overview of Task-Specific Agents
-====================
+------------------
 
 Each task-specific agent performs a unique role based on the user’s query. The agents perform actions such as:
 
@@ -14,21 +14,19 @@ Each task-specific agent performs a unique role based on the user’s query. The
 4. **Soil Classification Agent**: Analyzes soil images or data to classify soil types for agricultural use.
 
 Architecture
-====================
+------------------
 
 The architecture of the multi-agent system is designed to be modular, with each agent handling a specific task. The **Coordinator Agent** calls upon each of these task-specific agents as needed, passing the appropriate data for processing.
 
 Below is a high-level overview of how these agents interact:
 
 .. figure:: Documentation/Images/specif.png
-   :alt: Task-Specific Agents Architecture  
-   :width: 600px  
-   :align: center  
-   ..
-
----
+   :alt: Task-Specific Agents Architecture
+   :width: 600px
+   :align: center
 
 Detailed Presentation of Task-Specific Agents
+------------------
 
 1. **Plant Disease Detection Agent**
    - **Functionality**: This agent processes images of plants to detect potential diseases and classify them. It uses deep learning models trained on datasets of healthy and diseased plants.
@@ -58,13 +56,12 @@ Detailed Presentation of Task-Specific Agents
 
    **Use Case**: This agent assists farmers in determining which crops will perform best in a given soil environment, optimizing agricultural practices.
 
----
+
 
 Integration in the System
-====================
+------------------
 
 Each of these task-specific agents is integrated within the multi-agent system. The **Coordinator Agent** determines which specific agent should be invoked based on the task at hand and manages the flow of data between them. This modular architecture allows for flexibility, where new agents can be added in the future to handle additional tasks in the agricultural domain.
 
----
 
 This structure and the specialized functionality of each agent ensure that the **Segma-Vision Agriculture** project can address a variety of tasks with precision, enabling smarter and more efficient agricultural practices.

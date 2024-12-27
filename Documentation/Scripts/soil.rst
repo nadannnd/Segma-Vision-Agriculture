@@ -22,18 +22,18 @@ Model Architecture
 ------------------
 The **Soil Classification Agent** uses a **MobileNetV2** model pretrained on **ImageNet** as the base. This base model is fine-tuned for the specific task of soil classification, which includes adding custom layers for improved performance on the target task.
 
-Base Model:
+**Base Model**:
 
 - **Model**: MobileNetV2
 - **Pretraining**: Trained on ImageNet
 
-Custom Layers:
+**Custom Layers**:
 
 - **Global Average Pooling Layer**: Reduces the spatial dimensions of the feature maps, resulting in a vector that summarizes the features.
 - **Dense Layer**: A fully connected layer with 1024 units and ReLU activation function.
 - **Output Layer**: A softmax layer with 6 neurons, corresponding to the 6 soil types being classified.
 
-Optimizer and Loss Function:
+**Optimizer and Loss Function**:
 
 - **Optimizer**: Adam, an adaptive learning rate optimization algorithm.
 - **Loss Function**: Categorical Crossentropy, used for multiclass classification tasks.
@@ -56,13 +56,12 @@ Training and Validation Accuracy Graph
 --------------------------------------
 The graph below shows the training and validation accuracy over the 100 epochs. This helps visualize the model's learning progress and its ability to generalize to unseen data.
 
-.. figure:: Documentation\Images\soil.png
+.. figure:: Documentation/Images/soil.png
    :width: 600px
    :align: center
    :alt: Training and Validation Accuracy for Soil Classification Model
 
     *Figure 1*: Training and Validation Accuracy for Soil Classification.
-   ..
 
 
 The graph provides insight into the model's training process. Ideally, both the training and validation accuracy should increase steadily over time, indicating that the model is learning and not overfitting.
@@ -110,27 +109,24 @@ Here are some examples of how the **Soil Classification Agent** handles differen
 
 1. **User Input:** "Classify the soil type from this image."
     - **Output:** 
-        ```bash
-        [
-            {"task": "Soil classification", "image_required": true, "additional_info_required": false}
-        ]
-        ```
+        .. code-block:: json
+            [
+                {"task": "Soil classification", "image_required": true, "additional_info_required": false}
+            ]
 
 2. **User Input:** "Analyze the soil composition in this field."
     - **Output:** 
-        ```bash
-        [
-            {"task": "Soil classification", "image_required": true, "additional_info_required": false}
-        ]
-        ```
+        .. code-block:: json
+            [
+                {"task": "Soil classification", "image_required": true, "additional_info_required": false}
+            ]
 
 3. **User Input:** "What is the soil type in this image?"
     - **Output:** 
-        ```bash
-        [
-            {"task": "Soil classification", "image_required": true, "additional_info_required": false}
-        ]
-        ```
+        .. code-block:: json
+            [
+                {"task": "Soil classification", "image_required": true, "additional_info_required": false}
+            ]
 
 Conclusion
 ----------

@@ -5,7 +5,7 @@ The team consists of one individual, working under the supervision of Mr. Tawfik
 
 Supervisor : 
 ----------------
-    - **Encadrant**: Masrour Tawfik |linkedin_Masrour|
+    - **Encadrant**: Masrour Tawfik 
    
 Members : 
 --------------
