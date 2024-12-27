@@ -56,7 +56,7 @@ Training and Validation Accuracy Graph
 --------------------------------------
 The graph below shows the training and validation accuracy over the 100 epochs. This helps visualize the model's learning progress and its ability to generalize to unseen data.
 
-.. figure:: Documentation/Images/soil.png
+.. figure:: soil.png
    :width: 600px
    :align: center
    :alt: Training and Validation Accuracy for Soil Classification Model
@@ -76,6 +76,7 @@ After training, the model's performance is evaluated using the validation set. T
 The following command demonstrates how to evaluate the model on the validation set:
 
 .. code-block:: python
+
     # Evaluate model on validation data
     val_predictions = model.predict(X_val)
     val_accuracy = accuracy_score(y_val, val_predictions)
@@ -88,6 +89,7 @@ The **Input Agent** decides whether to route the task to the **Soil Classificati
 
 
 .. code-block:: python
+
     def decide_soil_task(user_input):
         """
         Determines if soil classification is needed based on user input.
@@ -109,21 +111,27 @@ Here are some examples of how the **Soil Classification Agent** handles differen
 
 1. **User Input:** "Classify the soil type from this image."
     - **Output:** 
+    
         .. code-block:: json
+
             [
                 {"task": "Soil classification", "image_required": true, "additional_info_required": false}
             ]
 
 2. **User Input:** "Analyze the soil composition in this field."
     - **Output:** 
+
         .. code-block:: json
+
             [
                 {"task": "Soil classification", "image_required": true, "additional_info_required": false}
             ]
 
 3. **User Input:** "What is the soil type in this image?"
     - **Output:** 
+
         .. code-block:: json
+
             [
                 {"task": "Soil classification", "image_required": true, "additional_info_required": false}
             ]

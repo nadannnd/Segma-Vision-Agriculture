@@ -27,7 +27,7 @@ The architecture of the **Plant Disease Detection Agent** follows a modular deep
 
 Below is a high-level architecture diagram of the Plant Disease Detection system:
 
-.. figure:: Documentation/Images/crop.png  
+.. figure:: crop.png  
    :alt: Plant Disease Detection Architecture  
    :width: 600px  
    :align: center  

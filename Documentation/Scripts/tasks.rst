@@ -20,7 +20,7 @@ The architecture of the multi-agent system is designed to be modular, with each 
 
 Below is a high-level overview of how these agents interact:
 
-.. figure:: Documentation/Images/specif.png
+.. figure:: specif.png
    :alt: Task-Specific Agents Architecture
    :width: 600px
    :align: center

@@ -40,7 +40,7 @@ The following pipeline illustrates the workflow of Segma-Vision Agriculture and 
 4. **Task-Specific Agent(s)**: Executes the task (e.g., disease detection, weed detection, or yield prediction).
 5. **Output**: The result is delivered to the user in the form of segmented images, predictions, or insights.
 
-.. figure:: Documentation/Images/agi.png
+.. figure:: agi.png
    :alt: Alternate text for the image
    :width: 600px
    :align: center

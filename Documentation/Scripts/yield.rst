@@ -9,7 +9,7 @@ Agent Pipeline
 ----------------
 The following diagram explains the agent:
 
-.. figure:: Documentation/Images/yil.png
+.. figure:: yil.png
    :alt: Yield Prediction Agent Process
 
 
@@ -47,7 +47,7 @@ Training Diagram
 ----------------
 The following diagram explains the training process:
 
-.. figure:: Documentation/Images/trai.png
+.. figure:: trai.png
    :alt: Yield Prediction Agent Training Process
 
 
@@ -93,7 +93,7 @@ This section describes the Python code used to fetch weather data and process it
 The necessary libraries for weather data fetching, geolocation, and machine learning are imported at the beginning. These include `requests`, `pandas`, `geopy`, and `joblib`.
 
 .. code-block:: python
-    
+
     import requests
     import pandas as pd
     from datetime import datetime, timedelta
