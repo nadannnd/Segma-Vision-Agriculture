@@ -9,9 +9,10 @@ Agent Pipeline
 ----------------
 The following diagram explains the agent:
 
-.. figure:: yil.png
-   :alt: Yield Prediction Agent Process
-
+.. figure:: yil.png  
+   :alt: Yield Prediction Agent Process 
+   :width: 600px  
+   :align: center 
 
 Training Process
 ----------------

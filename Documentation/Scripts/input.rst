@@ -30,10 +30,11 @@ Task Decision Flow Diagram
 
 The following diagram shows how the **Input Agent** processes the user input, analyzes it using Gemini LLM, and determines the appropriate tasks. It also indicates whether additional information or images are required for the tasks.
 
-.. figure:: Images/inp.png
+.. figure:: inp.png
    :alt: Input Agent Task Decision Flow
    :width: 600px
    :align: center
+
 
 Task Decision Code
 ------------------
@@ -94,7 +95,7 @@ The following examples illustrate how the **Input Agent** handles user queries a
 
 1. **User Input:** "Analyze this plant for diseases."
     - **Output:** 
-    
+
 .. code-block:: json
 
     [
